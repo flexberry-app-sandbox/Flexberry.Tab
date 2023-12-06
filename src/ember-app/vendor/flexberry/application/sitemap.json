@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "Tab",
+  "applicationTitle": "Tab",
+  "items": [
+    {
+      "link": null,
+      "menuName": "tab",
+      "caption": "Tab",
+      "title": "Tab",
+      "children": [
+        {
+          "link": "i-i-s-tab-должность-l",
+          "menuName": null,
+          "caption": "Должность",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-tab-бригада-l",
+          "menuName": null,
+          "caption": "Бригада",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-tab-сотрудник-l",
+          "menuName": null,
+          "caption": "Сотрудник",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-tab-должность-e",
+  "editForm": "i-i-s-tab-должность-e",
+  "external": false,
+  "caption": "Должность",
+  "name": "IISTabДолжностьL",
+  "className": "ДолжностьL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-tab-должность",
+      "modelProjection": "ДолжностьL"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+﻿{
+  "name": "IISTabСостав",
+  "modelName": "i-i-s-tab-состав",
+  "className": "Состав",
+  "nameSpace": "IIS.Tab",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "должность",
+      "relatedTo": "i-i-s-tab-должность",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудник",
+      "relatedTo": "i-i-s-tab-сотрудник",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "бригада",
+      "relatedTo": "i-i-s-tab-бригада",
+      "inverse": "состав"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СоставE",
+      "modelName": "i-i-s-tab-состав",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": "фамилия",
+          "lookupValueField": "фамилия",
+          "relationName": "Сотрудник",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": true,
+              "index": 1
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Сотрудник",
+          "name": "сотрудник",
+          "relatedTo": "i-i-s-tab-сотрудник",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Код",
+          "lookupValueField": "код",
+          "relationName": "Должность",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "код",
+              "caption": "Код",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Должность",
+          "name": "должность",
+          "relatedTo": "i-i-s-tab-должность",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

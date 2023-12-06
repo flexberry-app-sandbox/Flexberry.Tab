@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "сотрудник",
+      "displayAttributeName": "фамилия",
+      "required": true,
+      "relationName": "Состав.Сотрудник",
+      "projection": "СотрудникL",
+      "detailModelName": "i-i-s-tab-состав"
+    },
+    {
+      "master": "должность",
+      "displayAttributeName": "код",
+      "required": true,
+      "relationName": "Состав.Должность",
+      "projection": "ДолжностьL",
+      "detailModelName": "i-i-s-tab-состав"
+    }
+  ],
+  "external": false,
+  "caption": "Бригада",
+  "name": "IISTabБригадаE",
+  "className": "БригадаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-tab-бригада",
+      "modelProjection": "БригадаE"
+    }
+  ]
+}
