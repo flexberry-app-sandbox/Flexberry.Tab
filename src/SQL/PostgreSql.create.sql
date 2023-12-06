@@ -12,26 +12,26 @@ CREATE TABLE Должность (
 
 CREATE TABLE Бригада (
  primaryKey UUID NOT NULL,
- начбр VARCHAR(255) NULL,
  конбр VARCHAR(255) NULL,
  назначение VARCHAR(255) NULL,
+ начбр VARCHAR(255) NULL,
  PRIMARY KEY (primaryKey));
 
 
 CREATE TABLE Состав (
  primaryKey UUID NOT NULL,
- Сотрудник UUID NOT NULL,
  Должность UUID NOT NULL,
+ Сотрудник UUID NOT NULL,
  Бригада UUID NOT NULL,
  PRIMARY KEY (primaryKey));
 
 
 CREATE TABLE Сотрудник (
  primaryKey UUID NOT NULL,
- фамилия VARCHAR(255) NULL,
- отчество VARCHAR(255) NULL,
  имя VARCHAR(255) NULL,
+ отчество VARCHAR(255) NULL,
  табном VARCHAR(255) NULL,
+ фамилия VARCHAR(255) NULL,
  PRIMARY KEY (primaryKey));
 
 
@@ -139,11 +139,11 @@ CREATE TABLE ApplicationLog (
 
 
 
- ALTER TABLE Состав ADD CONSTRAINT FK81b3a9af6a9c5cd5ba914076cfc414a7fe72c6f9 FOREIGN KEY (Сотрудник) REFERENCES Сотрудник; 
-CREATE INDEX Index81b3a9af6a9c5cd5ba914076cfc414a7fe72c6f9 on Состав (Сотрудник); 
-
  ALTER TABLE Состав ADD CONSTRAINT FKa0c19324ef5779f17cc5f9b56bd6d17249abb024 FOREIGN KEY (Должность) REFERENCES Должность; 
 CREATE INDEX Indexa0c19324ef5779f17cc5f9b56bd6d17249abb024 on Состав (Должность); 
+
+ ALTER TABLE Состав ADD CONSTRAINT FK81b3a9af6a9c5cd5ba914076cfc414a7fe72c6f9 FOREIGN KEY (Сотрудник) REFERENCES Сотрудник; 
+CREATE INDEX Index81b3a9af6a9c5cd5ba914076cfc414a7fe72c6f9 on Состав (Сотрудник); 
 
  ALTER TABLE Состав ADD CONSTRAINT FKd2447493963bb3d3b6eedfd367cb36f9e3a4f99c FOREIGN KEY (Бригада) REFERENCES Бригада; 
 CREATE INDEX Indexd2447493963bb3d3b6eedfd367cb36f9e3a4f99c on Состав (Бригада); 
