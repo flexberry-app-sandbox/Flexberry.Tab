@@ -11,17 +11,17 @@
     "Validate": false,
     "Frontend": {
       "EmberJs": {
-        "EmberApp": true,
+        "EmberApp": false,
         "EmberAddon": false,
         "Build": false,
         "GitClone": false,
         "GitPush": false,
-        "GhPagesPush": true,
+        "GhPagesPush": false,
         "EmberMetadata": false
       },
       "ApacheCordova": {
-        "CordovaProject": false,
-        "BuildApp": false
+        "CordovaProject": true,
+        "BuildApp": true
       }
     },
     "Backend": {
@@ -30,7 +30,7 @@
       "Java": true
     },
     "Docker": {
-      "Dockerfile": true,
+      "Dockerfile": false,
       "DockerfileAutobuild": false,
       "DockerBuildShellScript": false,
       "DockerSwarm": false
